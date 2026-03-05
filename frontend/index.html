@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" lang="pt-br" />
+        <title>Web Tickets</title>
+    </head>
+    <body bgcolor="gray">
+        <p id="result">Carregando...</p>
+        <script src="script.js"></script>
+        <h1>Welcome to My Website</h1>
+        <div class="form">
+            <h1>Tickets</h1>
+            <form>
+                <p>Description</p>
+                <input type="text" placeholder="Name" />
+                <p>Status</p>
+                <input type="radio" id="active" value="active" />
+                <label for="active">Active</label>
+                <input type="radio" id="inactive" value="inactive" />
+                <label for="inactive">Inactive</label>
+                <input type="radio" id="finished" value="finished" />
+                <label for="finished">Finished</label>
+                <p>Tecnico</p>
+                <select name="tec" id="tec">
+                    <option value=""></option>
+                </select>
+            </form>
+        </div>
+
+        <div class="form">
+            <h1>Tecnicos</h1>
+            <form id="myForms" method="post">
+                <p>Nome</p>
+                <input type="text" id="name" placeholder="Name" />
+                <p>CPF</p>
+                <input type="text" id="cpf" placeholder="CPF" />
+                <input
+                    type="button"
+                    name="submit"
+                    value="Submit"
+                    onclick="subValidate()"
+                />
+            </form>
+        </div>
+
+        <div class="delete">
+            <h1>Delete</h1>
+            <p>CPF a deletar</p>
+            <input type="text" id="deleteCpf" placeholder="CPF" />
+            <input
+                type="button"
+                name="submit"
+                value="Submit"
+                onclick="getFields()"
+            />
+        </div>
+
+        <div class="change">
+            <h1>Change</h1>
+            <p>CPF a mudar</p>
+            <form id="chgForms">
+                <input type="text" id="changeCpf" placeholder="CPF" />
+                <input type="text" id="changeName" placeholder="nome" />
+                <input
+                    type="button"
+                    name="submit"
+                    value="Submit"
+                    onclick="chgFields()"
+                />
+            </form>
+        </div>
+    </body>
+</html>
