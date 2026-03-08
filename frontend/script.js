@@ -66,6 +66,7 @@ async function delFetch(id) {
 }
 
 async function putFetch(id, name) {
+	//const newURLc="http:localhost:3000/change";
   const options = {
     method: "PUT",
     headers: {
@@ -84,7 +85,11 @@ async function putFetch(id, name) {
 function chgFields() {
   //let gfieldID = document.getElementById("changeCpf").value;
   //let gfieldName = document.getElementById("changeName").value;
-  let gfieldID = document.forms["chgForms"]["changeCpf"].value;
-  let gfieldName = document.forms["chgForms"]["changeName"].value;
-  putFetch(gfieldID, { gfieldID, gfieldName });
+  //let gfieldID = document.forms["chgForms"]["changeCpf"].value;
+  //let gfieldName = document.forms["chgForms"]["changeName"].value;
+  let cpf= document.forms["chgForms"]["changeCpf"].value;
+  let name= document.forms["chgForms"]["changeName"].value;
+  //putFetch(gfieldID, { gfieldID, gfieldName });
+  putFetch(cpf, { cpf, name});
+  //putFetch({ gfieldID, gfieldName });
 }
